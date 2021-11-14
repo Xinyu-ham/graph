@@ -97,7 +97,7 @@ class Graph:
 
         pos = nx.spring_layout(G)
         nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels)
-        nx.draw(G, pos, node_color=v, node_size=1500, with_labels=True)
+        nx.draw(G, pos, node_color=v, node_size=10000/len(v), with_labels=True)
         if save:
             plt.savefig('./'+save)
         else:
