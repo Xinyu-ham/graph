@@ -1,4 +1,5 @@
 from graph_model.model import Graph
+from dijkstra import DijkstraSolver
 
 data = [
     ['A', 'B', '2'],
@@ -17,3 +18,6 @@ data = [
 graph = Graph(data)
 graph.set_starting_point('A')
 graph.draw('example.png')
+
+ds = DijkstraSolver(graph)
+print(ds.solve())
